@@ -10,7 +10,7 @@ def a(n):
 # Função que define o termo geral de uma sequência numérica 
 # sabidamente convergente
 def b(n):
-    return 1**((2*n)+1)
+    return 1/(np.exp(n) + 1)
 
 # Função que define o termo geral de uma sequência numérica
 # sabidamente limitada porém divergente
@@ -43,10 +43,10 @@ if func == 1:
 
 elif func == 2:
 
-#ele tende a zero em L
+    #ele tende a zero em L
     L = float(input('Digite o valor do limite L: '))
     eps = float(input('Digite o valor da tolerância eps: '))
-    #ele passa por um eps 0.0001 em 20000
+    #ele fica dentro do eps 0.0001 depois do 10
     nmin = int(input('Digite o valor de nmin: '))
     nmax = int(input('Digite o valor de nmax: '))
 
