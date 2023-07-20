@@ -2,13 +2,14 @@
 # Importando bibliotecas
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 
 # Função que define o termo geral de uma sequência numérica
 def a(n):
     return 1/(n**2)
 
 # Função que define o termo geral de uma sequência numérica 
-# sabidamente convergente
+# sabidamente convergentes
 def b(n):
     return 1/(np.exp(n) + 1)
 
@@ -40,6 +41,10 @@ if func == 1:
     plt.ylabel('a(n)')
     plt.title('Gráfico de a(n)')
     plt.show()
+    #mostrando a tabela com os valores de n e a(n)
+    df = pd.DataFrame({'n': n, 'a(n)': an})
+    print(df)
+
 
 elif func == 2:
 
@@ -71,6 +76,10 @@ elif func == 2:
     plt.ylabel('b(n)')
     plt.title('Gráfico de b(n)')
     plt.show()
+
+    #mostrando a tabela com os valores de n e a(n)
+    df = pd.DataFrame({'n': n, 'a(n)': bn})
+    print(df)
 elif func == 3:
     K = float(input('Digite o valor de K: '))
     M = float(input('Digite o valor de M: '))
@@ -95,6 +104,8 @@ elif func == 3:
     plt.ylabel('c(n)')
     plt.title('Gráfico de c(n)')
     plt.show()
+    #mostrando a tabela com os valores de n e a(n)
+    df = pd.DataFrame({'n': n, 'a(n)': cn})
 
 elif func == 4:
     M = float(input('Digite o valor de M: '))
@@ -116,6 +127,8 @@ elif func == 4:
     plt.ylabel('d(n)')
     plt.title('Gráfico de d(n)')
     plt.show()
+    #mostrando a tabela com os valores de n e a(n)
+    df = pd.DataFrame({'n': n, 'a(n)': dn})
 
 
     
